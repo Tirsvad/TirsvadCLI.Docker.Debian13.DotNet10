@@ -1,0 +1,9 @@
+﻿services:
+  tirsvad-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tirsvad/tirsvadcli_dotnet10_debian13:latest
+    container_name: tirsvadcli_dotnet10_debian13
+    tty: true
+    stdin_open: true
