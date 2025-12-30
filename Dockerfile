@@ -22,6 +22,10 @@ RUN set -eux; \
 # Verify install (will show version when building)
 RUN dotnet --info
 
+# Install dotnet coverage tool
+RUN dotnet tool install --global dotnet-coverage --version 18.1.0
+RUN dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.5.1
+
 WORKDIR /app
 
 CMD ["bash"]
