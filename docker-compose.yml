@@ -3,7 +3,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: tirsvad/tirsvadcli_debian13_dotnet10:latest
+    image: tirsvad/tirsvadcli_debian13_dotnet10
     container_name: tirsvadcli_debian13_dotnet10
-    tty: true
-    stdin_open: true
+    # tty: true
+    # stdin_open: true
+    labels:
+      org.opencontainers.image.title: "tirsvad-cli"
+      org.opencontainers.image.description: "CLI tool image for Tirsvad built on Debian 13 with .NET 10"
+      org.opencontainers.image.version: "1.1"
+      org.opencontainers.image.authors: "Tirsvad"
+      org.opencontainers.image.source: "https://github.com/Tirsvad/TirsvadCLI.Docker.Debian13.DotNet10"
+      org.opencontainers.image.licenses: "AGPL-3.0"
+      com.tirsvad.description: "Debian 13 image with .NET 10. Used for development and deployment."
+      org.opencontainers.image.tags: "1.1, latest"
+
